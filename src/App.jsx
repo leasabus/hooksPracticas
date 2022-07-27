@@ -8,11 +8,23 @@ import { FormWithHook } from "./02-useEffect/FormWithHook";
 import { MultipleCustomHook } from "./03 - examples/MultipleCustomHook";
 import { FocusScreen } from "./04 - UseRef/FocusScreen";
 import {Layout} from './05 - useLayoutEfect/Layout'
+import { Memorize } from "./06-memo/Memorize";
+import { HookMemo } from "./06-memo/HookMemo";
+import { HookCallback } from "./07-useCallback/HookCallback";
+import { Tarea } from "./08-Tarea/Tarea";
 
 function App() {
   return (
     <div className="App">
       <h1>Hooks App</h1>
+      <Tarea/>
+      <hr />
+      <HookCallback/>
+      <hr />
+      <HookMemo/>
+      <hr />
+      <Memorize/>
+      <hr />
       <Layout/>
       <hr />
       <FocusScreen/>
