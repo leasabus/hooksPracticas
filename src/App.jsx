@@ -12,11 +12,15 @@ import { Memorize } from "./06-memo/Memorize";
 import { HookMemo } from "./06-memo/HookMemo";
 import { HookCallback } from "./07-useCallback/HookCallback";
 import { Tarea } from "./08-Tarea/Tarea";
+import "./09 - reducer/intro-reducer"
+import { TodoApp } from "./09 - reducer/TodoApp";
 
 function App() {
   return (
     <div className="App">
       <h1>Hooks App</h1>
+      <TodoApp/>
+      <hr />
       <Tarea/>
       <hr />
       <HookCallback/>
