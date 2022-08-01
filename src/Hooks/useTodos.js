@@ -5,10 +5,10 @@ import { todoReducer } from '../09 - reducer/todoReducer';
 const init = () => {
     return JSON.parse(localStorage.getItem('todos')) || [];
 }
-//segundo combinamos el state con el dispach ya que dependen del state anterior
+//Primero combinamos el state con el dispach ya que dependen del state anterior
 export const useTodos = () => {
   
-    const [ todos, dispatch ] = useReducer( todoReducer, [], init );
+    const [ todos, dispatch ] = useReducer( todoReducer, [], init );//recordar que los [] es el initialState
 
     useEffect(() => {
       localStorage.setItem('todos', JSON.stringify( todos ) );
@@ -49,6 +49,8 @@ export const useTodos = () => {
 
     return {
         todos,
+        todosCount: todos.length,
+        pendingTodosCount: todos.filter(todo=> !todo.done).length,
         handleNewTodo,
         handleDeleteTodo,
         handleToggleTodo,

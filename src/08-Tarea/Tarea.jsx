@@ -20,7 +20,7 @@ export const Tarea = () => {
     <h3>Total: {valor}</h3>
     <hr />
     {
-        numeros.map(numero=><Button key={numero} incrementar={incrementar} numero={numero}/>)
+        numeros.map(numero=><Button  key={numero} incrementar={incrementar} numero={numero}/>)
     }
     </>
   )

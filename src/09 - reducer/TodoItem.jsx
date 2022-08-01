@@ -16,8 +16,8 @@ export const TodoItem = ({ todo, onDeleteTodo, onToggleTodo, onEditTodo }) => {
       {
                 !editEnable ?
         <><span
-            className={`align-self-center ${(todo.done) ? 'text-decoration-line-through' : ''}`}
-            onClick={() => onToggleTodo(todo.id)}
+            className={`align-self-center  user-select-none ${(todo.done) ? 'text-decoration-line-through ' : ''}`}
+            onDoubleClick={() => onToggleTodo(todo.id)}
             aria-label="span"
           >
             {todo.description}

@@ -2,13 +2,26 @@ import { useTodos } from "../Hooks/useTodos";
 import { TodoList } from "./TodoList";
 import { TodoAdd } from "./TodoAdd";
 
+
+// 1/8/22 const init = () => {
+//  return JSON.parse(localStorage.getItem('todos')) || [];
+//}
+
 export const TodoApp = () => {
-  const { todos, handleDeleteTodo, handleToggleTodo, handleNewTodo, handleEditTodo} =
+  const { todos, handleDeleteTodo, handleToggleTodo, handleNewTodo, handleEditTodo, todosCount, pendingTodosCount} =
     useTodos();
-//cuarto traemos el hook del usetodos con la funcionalidad de cada boton e input para irlos definiendo, a su vez agregamos en cada etiqueta los que van a usarse dentro de las mismas
+
+    // 1/8/22 const [const [ todos, dispatch ] = useReducer( todoReducer,"initialState" es igual a un arreglo vacio[], init );]
+    // useEffect(() => {
+    //   localStorage.setItem('todos', JSON.stringify( todos ) );
+    // }, [todos]) se ejecuta cada vez que cambian los todos
+    
+
+
+    //cuarto traemos el hook del usetodos con la funcionalidad de cada boton e input para irlos definiendo, a su vez agregamos en cada etiqueta los que van a usarse dentro de las mismas
   return (
     <>
-      <h2>TodoApp</h2>
+      <h2>TodoApp {todosCount} -  Pendientes {pendingTodosCount}</h2>
       <hr />
 
       <section className="row">
