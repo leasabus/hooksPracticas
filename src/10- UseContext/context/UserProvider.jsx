@@ -9,7 +9,7 @@ const user1 ={
 
 export const UserProvider = ({children}) => {
 
-const [user, setUser] = useState(user1)
+const [user, setUser] = useState()
 
   return (//provee a todos los componentes de este contexto de toda la informacion que pasamos por aca
     <UserContext.Provider value={{user, setUser}}>
