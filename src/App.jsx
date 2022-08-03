@@ -14,11 +14,14 @@ import { HookCallback } from "./07-useCallback/HookCallback";
 import { Tarea } from "./08-Tarea/Tarea";
 import "./09 - reducer/intro-reducer"
 import { TodoApp } from "./09 - reducer/TodoApp";
+import { MainApp } from "./10- UseContext/MainApp";
 
 function App() {
   return (
     <div className="App">
       <h1>Hooks App</h1>
+      <MainApp/>
+      <hr />
       <TodoApp/>
       <hr />
       <Tarea/>
